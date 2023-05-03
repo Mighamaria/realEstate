@@ -41,9 +41,9 @@ public class RealestateController {
     public List<Realestate> getBasedOnBath(@PathVariable int bath) {
         return realestateService.getBasedOnbath(bath);
     }
-    @GetMapping("/selectstatus/{status}")
-    public ResponseEntity<Integer> getCountOfForSalePropertiesInCity(@PathVariable String status) {
-        int count = realestateService.getCountOfForSalePropertiesInCity(status);
+    @GetMapping("/selectstatus/{city}")
+    public ResponseEntity<Integer> getCountOfForSalePropertiesInCity(@PathVariable String city) {
+        int count = realestateService.getCountOfForSalePropertiesInCity(city);
         return ResponseEntity.ok(count);
     }
 
