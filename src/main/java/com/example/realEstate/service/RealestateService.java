@@ -36,7 +36,7 @@ public class RealestateService {
     }
 
     public int getCountOfForSalePropertiesInCity(String city) {
-        List<Realestate> propertiesInCity = realestateRepository.findByStatus(city);
+        List<Realestate> propertiesInCity = realestateRepository.findByCity(city);
         int count = (int) propertiesInCity.stream()
                 .filter(p -> p.getStatus().equals("for_sale"))
                 .count();
